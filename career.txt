@@ -1,0 +1,6 @@
+Models creation:
+form error handling:
+CRUD operations:
+Resume
+(any styling)
+Dextro flow(erp)

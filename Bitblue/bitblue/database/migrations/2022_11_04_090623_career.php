@@ -1,0 +1,46 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class Career extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        if (!Schema::hasTable('careers')) {
+            Schema::create('careers', function (Blueprint $table) {
+                $table->id();
+                $table->string('candidateName');
+                $table->string('candidateImage');
+                $table->string('designation');
+                $table->string('gender');
+                $table->string('dob');
+                $table->string('phonenumber');
+                $table->string('email');
+                $table->string('qualification');
+                $table->string('languages');
+                $table->string('resume');
+                $table->string('message');
+                $table->timestamp('created_at')->nullable();
+                $table->timestamp('updated_at')->nullable();
+                $table->timestamp('deleted_at')->nullable();
+            });
+        }
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        //
+    }
+}
